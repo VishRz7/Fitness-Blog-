@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+	<title>Gallery</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+	<style>
+    body {
+      background-image: linear-gradient(to right, #fc5c7d, #6a82fb);
+    }
+
+    .item:hover {
+      filter: brightness(80%);
+    }
+	</style>
+  </head>
+  
+  
+  <body>
+    <!-- Content -->
+    <section>
+      <div class="container-fluid">
+        <h1 class="fw-bold text-center display-4 py-3">Gallery</h1>
+        <div class="row" id="gallery">
+          <div class="item col-12 col-sm-6 col-md-4 mx-auto my-3">
+            <a href="images/workout.jpg">
+              <img src="images/workout.jpg" alt="workout" class="img-fluid rounded" width="400" height="250">
+            </a>
+          </div>
+          <div class="item col-12 col-sm-6 col-md-4 mx-auto my-3">
+            <a href="images/balance.jpg">
+              <img src="images/balance.jpg" alt="workout" class="img-fluid rounded" width="400" height="250">
+            </a>
+          </div>
+          <div class="item col-12 col-sm-6 col-md-4 mx-auto my-3">
+            <a href="images/download.jpg">
+              <img src="images/download.jpg" alt="workout" class="img-fluid rounded" width="400" height="250">
+            </a>
+          </div>
+          <div class="item col-12 col-sm-6 col-md-4 mx-auto my-3">
+            <a href="images/strength.jpg">
+              <img src="images/strength.jpg" alt="workout" class="img-fluid rounded" width="400" height="250">
+            </a>
+          </div>
+          <div class="item col-12 col-sm-6 col-md-4 mx-auto my-3">
+            <a href="images/endurance.png">
+              <img src="images/endurance.png" alt="workout" class="img-fluid rounded" width="400" height="250">
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+	<!--Footer-->
+    <footer class="bg-dark text-light p-2">
+      <div class="d-flex justify-content-between">
+        <p>&copy; Nemesis</p>
+        <a href="bootstrap_blog.html">Back to Fitness Blog</a>
+      </div>
+    </footer>
+    <!--End of footer-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@fancyapps/ui@4.0/dist/fancybox.umd.js"></script>
+    <script>
+      Fancybox.bind("#gallery a", {
+        groupAll: true, // Group all items
+        on: {
+          ready: (fancybox) => {
+            console.log(`fancybox #${fancybox.id} is ready!`);
+          }
+        }
+      });
+    </script>
+  </body>
+</html>
